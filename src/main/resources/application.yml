@@ -1,0 +1,12 @@
+server:
+  port: 8080
+  session-timeout: 7200
+  error:
+  path: /error/error
+  tomcat:
+    max-threads: 150  # tomcat最大线程数，默认为200
+    uri-encoding: UTF-8 # tomcat的URI编码
+    access-log-enabled: true  # 打开Tomcat的Access日志，并可以设置日志格式的方法;
+    access-log-pattern: "time=%t,client=%a,server=%A:%p,query=%r,status=%s"
+    accesslog.directory: g:/logs # accesslog目录，默认在basedir/logs
+    maxHttpHeaderSize: 8124

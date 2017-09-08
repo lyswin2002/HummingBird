@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>非响应式布局</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../lib/pintuer/v1.0/pintuer.css">
+    <script src="../../lib/jquery/v1.11/jquery.js"></script>
+    <script src="../../lib/pintuer/v1.0/pintuer.js"></script>
+
+    <!-- 自定义js、css只能放在此区域保证页面的正常响应-->
+    <script src="demo.js"></script>
+    <!--  --------------------------------------- -->
+
+    <script src="../../lib/other/respond/v1.4.2/respond.js"></script>
+    <style>
+        .demo-nav.fixed.fixed-top {
+            z-index: 8;
+            background: #fff;
+            width: 100%;
+            padding: 0;
+            border-bottom: solid 3px #0a8;
+            -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .175);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .175);
+        }
+    </style>
+</head>
+</head>
+<body>
+
+<!--顶部-->
+<div class="layout bg-black bg-inverse">
+    <div class="container height-large">
+				<span class="float-right text-small text-gray"> <!--如果屏幕太小，为了美观，需要隐藏此内容，加上 hidden-l类-->
+                <a class="text-main" href="http://www.pintuer.com">注册</a><span> | </span>
+				<a class="text-main" href="http://www.pintuer.com">登录</a><span> | </span>
+				<a class="text-main" href="http://www.pintuer.com">积分兑换</a><span> | </span>
+				<a class="text-main" href="http://www.pintuer.com">帮助中心</a>
+				</span>
+        欢迎使用拼图<a href="http://www.pintuer.com">CSS框架</a>
+    </div>
+</div>
+
+<!--导航-->
+<div class="demo-nav padding-big-top padding-big-bottom fixed">
+    <div class="container padding-top padding-bottom">
+
+        <div class="line">
+            <div class="xl12 xs3 xm3 xb2">
+                <button class="button icon-navicon float-right" data-target="#header-demo"></button>
+                <a target="_blank" href="http://www.pintuer.com"><img src="images/logo.png" alt="前端CCS框架" /></a>
+            </div>
+            <div class=" xl12 xs9 xm9 xb10 nav-navicon" id="header-demo">
+
+                <div class="xs8 xm6 xb5 padding-small">
+                    <ul class="nav nav-menu nav-inline nav-big">
+                        <li><a href="http://www.pintuer.com">首页</a></li>
+                        <li><a href="http://www.pintuer.com">CSS</a></li>
+                        <li class="active">
+                            <a href="http://www.pintuer.com">元件<span class="arrow"></span></a>
+                            <ul class="drop-menu">
+                                <li><a href="http://www.pintuer.com">概述</a></li>
+                                <li>
+                                    <a href="http://www.pintuer.com">网格系统<span class="arrow"></span></a>
+                                    <ul>
+                                        <li><a href="http://www.pintuer.com">响应式布局</a></li>
+                                        <li><a href="http://www.pintuer.com">非响应式布局</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="http://www.pintuer.com">图标</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://www.pintuer.com">更多<span class="arrow"></span></a>
+                            <ul class="drop-menu">
+                                <li><a href="http://www.pintuer.com">组件</a></li>
+                                <li>
+                                    <a href="http://www.pintuer.com">模块<span class="arrow"></span></a>
+                                    <ul>
+                                        <li><a href="http://www.pintuer.com">头部</a></li>
+                                        <li><a href="http://www.pintuer.com">导航</a></li>
+                                        <li><a href="http://www.pintuer.com">底部</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="xs4 xm3 xb4">
+                    <form>
+                        <div class="input-group padding-little-top">
+                            <input type="text" class="input border-main" name="keywords" size="30" placeholder="关键词" />
+                            <span class="addbtn"><button type="button" class="button bg-main icon-search"></button></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="hidden-l hidden-s xm3 xb3">
+                    <div class="text-red text-big icon-phone height-large text-right"> 热线 400 1234567</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<img src="images/1.jpg" class="img-border radius padding-small img-responsive" />
+<div class="line">
+    <div class="xb6 icon-child">
+        xb6</div>
+    <div class="xb6">
+        xb6</div>
+</div>
+<img src="images/2.jpg" class="img-border radius padding-small img-responsive" />
+
+<div class="hidden">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F637f0fe043ea4b7f59c05d4491e27667' type='text/javascript'%3E%3C/script%3E"));
+        })();
+    </script>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+1、所有第三方引用js库或插件都放在lib目录中，每一个库或插件都新建一个目录区分，更换新版本时，统一用增加版本目录。
+2、开发时，在webapp目录下，按功能模块划分目录，并将对应的js\css\img放到此目录下。
+3、上线时，利用压缩、打包工具将css\js\图片\html分别输出到对应的统一目录（css\js\img\html)中,并根据文件内容hash（可以永久缓存），同时对第三方包的引用进行版本替换。
+
+开发时：
+
+    -webapp
+    |
+    --lib
+      |
+      --jquery
+        |
+        --v1.11
+          |
+          --jquery.js
+    --html
+      |
+      --user
+        |
+        --index.html
+        |
+        --css
+           |
+           --index.css
+        --js
+           |
+           --index.js
+        |
+        --image
+           |
+           --index.jpg
+      |
+      --css
+        |
+        --main.css
+      --js
+        |
+        --main.js
+      |
+      --images
+        |
+        --home.jpg
+
+
+
+上线时：
+
+    -static
+        |
+        --lib
+          |
+          --jquery
+            |
+            --v1.11
+              |
+              --jquery.js
+        --html
+          |
+          --user
+            |
+            --index.html
+          |
+          --css
+            |
+            --main123.css
+            |
+            --user_index123.css
+          --js
+            |
+            --main123.js
+            |
+            --user_index123.js
+          |
+          --images
+            |
+            --home123.jpg
+            |
+            --user_index123.jpg
+
+          *(css\js\image都会添加hash码）
